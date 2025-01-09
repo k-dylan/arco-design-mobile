@@ -37,7 +37,7 @@ export interface IDateObj {
     second: number;
 }
 // Record<ItemType, ValueType>
-export type mode = 'date' | 'time' | 'datetime';
+export type mode = 'date' | 'time' | 'datetime' | 'datetimeAndSecond';
 
 export interface DatePickerProps
     extends Omit<
@@ -73,8 +73,8 @@ export interface DatePickerProps
      */
     onValueChange?: (timestamp: number, obj: IDateObj, index: number) => void;
     /**
-     * 可选列类型，date - 年月日，time - 时分秒，datetime - 年月日时分秒
-     * @en Optional column type, date means year, month and day, time means hour, minute and second, datetime means year, month, day, hour, minute and second
+     * 可选列类型，date - 年月日，time - 时分秒，datetime - 年月日时分，datetimeAndSecond - 年月日时分秒
+     * @en Optional column type, date means year, month and day, time means hour, minute and second, datetime means year, month, day, hour, minute and second, datetimeAndSecond means year, month, day, hour, minute and second
      * @default "datetime"
      */
     mode?: mode;

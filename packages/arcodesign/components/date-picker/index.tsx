@@ -255,6 +255,9 @@ const DatePicker = forwardRef((props: DatePickerProps, ref: Ref<DatePickerRef>) 
             case 'time':
                 options = allTypes.slice(3);
                 break;
+            case 'datetime':
+                options = allTypes.slice(0, 5);
+                break;
             default:
                 options = allTypes;
         }
