@@ -19,7 +19,7 @@
         "eslint": "eslint packages/ sites/ --fix",
         "test": "jest --config packages/arcodesign/jest.config.js",
         "prepub": "node scripts/publish/pre-publish.js",
-        "pub": "lerna publish --no-git-reset --registry=https://registry.npmjs.org/",
+        "pub": "lerna publish --no-git-reset --registry=https://packages.aliyun.com/5ffd87467c4a6a0f9774e601/npm/npm-registry/",
         "postpub": "node scripts/publish/post-publish.js",
         "postinstall": "npm run init && lerna run build --scope @arco-design/mobile-utils",
         "pub-canary": "node scripts/publish/pub-canary.js",
