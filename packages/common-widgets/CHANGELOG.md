@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.22.0](https://github.com/k-dylan/arco-design-mobile/compare/@arco-design/mobile-utils@2.21.0...@arco-design/mobile-utils@2.22.0) (2025-01-09)
+
+
+### Features
+
+* 增加时间选择器mode ([c9b20f9](https://github.com/k-dylan/arco-design-mobile/commit/c9b20f94d6dd7099792727d472fb48fa46788473))
+
+
+
+
+
 # [2.21.0](https://github.com/k-dylan/arco-design-mobile/compare/@arco-design/mobile-utils@2.20.2...@arco-design/mobile-utils@2.21.0) (2025-01-09)
 
 
