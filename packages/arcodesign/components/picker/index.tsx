@@ -5,6 +5,8 @@ import Popup from '../popup';
 import PickerView, { PickerViewRef, ValueType, PickerCellMovingStatus } from '../picker-view';
 import { PickerProps } from './type';
 import { useLatestRef, useListenResize } from '../_helpers';
+import Button from '../button';
+import { IconClose } from '../icon';
 
 export * from './type';
 export { MultiPicker, PickerCell, Cascader } from '../picker-view';
@@ -99,13 +101,6 @@ const Picker = forwardRef((props: PickerProps, ref: Ref<PickerRef>) => {
         onHide?.(scene);
     }
 
-    function handleDismiss() {
-        if (onDismiss) {
-            onDismiss();
-        }
-        hidePicker('dismiss');
-    }
-
     function getCurrentValueData() {
         const val = pickerViewRef.current?.getAllColumnValues() || scrollValueRef.current || [];
         const selectedData = pickerViewRef.current?.getAllColumnData() || [];
@@ -167,19 +162,11 @@ const Picker = forwardRef((props: PickerProps, ref: Ref<PickerRef>) => {
                     >
                         <div className={`${prefixCls}-picker-wrap`} ref={domRef}>
                             <div className={`${prefixCls}-picker-header`}>
-                                <div
-                                    className={`${prefixCls}-picker-header-btn left`}
-                                    onClick={handleDismiss}
-                                >
-                                    {dismissText || locale?.Picker.cancelText}
-                                </div>
                                 <div className={`${prefixCls}-picker-header-title`}>{title}</div>
-                                <div
-                                    className={`${prefixCls}-picker-header-btn right`}
-                                    onClick={handleConfirm}
-                                >
-                                    {okText || locale?.Picker.okText}
-                                </div>
+                                <IconClose
+                                    className={`${prefixCls}-picker-header-close`}
+                                    onClick={() => hidePicker('dismiss')}
+                                />
                             </div>
                             <PickerView
                                 ref={pickerViewRef}
@@ -195,6 +182,16 @@ const Picker = forwardRef((props: PickerProps, ref: Ref<PickerRef>) => {
                                 hideEmptyCols={hideEmptyCols}
                                 touchToStop={touchToStop}
                             />
+                            <div className={`${prefixCls}-picker-footer`}>
+                                {onDismiss && (
+                                    <Button type="primary" onClick={onDismiss}>
+                                        {dismissText || locale?.Picker.cancelText}
+                                    </Button>
+                                )}
+                                <Button type="primary" onClick={handleConfirm}>
+                                    {okText || locale?.Picker.okText}
+                                </Button>
+                            </div>
                         </div>
                     </Popup>
                 </>

@@ -4,6 +4,7 @@
     .noselect();
     .use-var(height, picker-view-wrapper-height);
     position: relative;
+    padding: 12px;
 }
 
 .@{prefix}-picker {
@@ -19,7 +20,8 @@
         position: absolute;
         left: 0;
         top: 0;
-        width: 100%;
+        width: calc(100% - 24px);
+        margin: 0 12px;
         height: 100%;
         display: flex;
         align-items: center;
@@ -40,8 +42,15 @@
             white-space: nowrap;
             overflow-y: hidden;
             overflow-x: auto;
+            font-size: 13px;
+
             &::-webkit-scrollbar {
                 display: none;
+            }
+
+            &.selected {
+                .use-var(color, primary-color);
+                font-weight: 600;
             }
         }
     }
@@ -68,8 +77,11 @@
             width: 100%;
             .use-var(height, picker-view-cell-height);
             flex: 0 0 auto;
-            .onepx-border-var(top, picker-view-selection-border-color);
-            .onepx-border-var(bottom, picker-view-selection-border-color);
+            border-radius: 6px;
+            // .onepx-border-var(all, picker-view-selection-border-color);
+            background-color: #F4F8FF;
+
+
         }
     }
 }

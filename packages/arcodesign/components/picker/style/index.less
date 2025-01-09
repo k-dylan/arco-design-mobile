@@ -17,6 +17,14 @@
         .use-var(height, picker-header-height);
         .use-var(border-top-left-radius, picker-wrapper-border-radius);
         .use-var(border-top-right-radius, picker-wrapper-border-radius);
+        border-bottom: 1px solid #f2f2f2;
+
+        &-close {
+            .use-var(color, font-color);
+            width: 14px;
+            height: 14px;
+            margin-right: 12px;
+        }
 
         &-title {
             flex: 1;
@@ -25,6 +33,7 @@
             .use-var(padding, picker-title-padding);
             .use-var(color, font-color);
             .text-overflow();
+            font-weight: 600;
         }
 
         &-btn {
@@ -42,5 +51,13 @@
                 .use-var(color, picker-right-btn-color);
             }
         }
+    }
+
+    &-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-top: 1px solid #f2f2f2;
     }
 }

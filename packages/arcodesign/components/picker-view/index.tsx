@@ -220,6 +220,19 @@ const PickerView = forwardRef((props: PickerViewProps, ref: Ref<PickerViewRef>) 
                     style={{ height: `${itemHeight * rows}px` }}
                     ref={wrapperRef}
                 >
+                    <div className={`${prefixCls}-picker-selection`}>
+                        <div
+                            className={`${prefixCls}-picker-selection-mask ${prefixCls}-picker-selection-mask-top`}
+                        />
+                        <div
+                            ref={barRef}
+                            className={`${prefixCls}-picker-selection-bar`}
+                            style={selectionBarHeight}
+                        />
+                        <div
+                            className={`${prefixCls}-picker-selection-mask ${prefixCls}-picker-selection-mask-bottom`}
+                        />
+                    </div>
                     {cascade ? (
                         <Cascader
                             prefixCls={prefixCls || ''}
@@ -265,19 +278,6 @@ const PickerView = forwardRef((props: PickerViewProps, ref: Ref<PickerViewRef>) 
                             ))}
                         </MultiPicker>
                     )}
-                    <div className={`${prefixCls}-picker-selection`}>
-                        <div
-                            className={`${prefixCls}-picker-selection-mask ${prefixCls}-picker-selection-mask-top`}
-                        />
-                        <div
-                            ref={barRef}
-                            className={`${prefixCls}-picker-selection-bar`}
-                            style={selectionBarHeight}
-                        />
-                        <div
-                            className={`${prefixCls}-picker-selection-mask ${prefixCls}-picker-selection-mask-bottom`}
-                        />
-                    </div>
                 </div>
             )}
         </ContextLayout>
