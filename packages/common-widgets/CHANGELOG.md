@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.21.0](https://github.com/k-dylan/arco-design-mobile/compare/@arco-design/mobile-utils@2.20.2...@arco-design/mobile-utils@2.21.0) (2025-01-09)
+
+
+### Features
+
+* 修改picker样式 ([69cd394](https://github.com/k-dylan/arco-design-mobile/commit/69cd394293058bd8c37d5d7d11df3587c1761244))
+
+
+
+
+
 ## [2.20.2](https://github.com/arco-design/arco-design-mobile/compare/@arco-design/mobile-utils@2.20.1...@arco-design/mobile-utils@2.20.2) (2025-01-09)
 
 **Note:** Version bump only for package @arco-design/mobile-utils

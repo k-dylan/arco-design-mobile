@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.36.0](https://github.com/k-dylan/arco-design-mobile/compare/@arco-design/mobile-react@2.35.0...@arco-design/mobile-react@2.36.0) (2025-01-09)
+
+
+### Features
+
+* 修改npm仓库 ([65c15a8](https://github.com/k-dylan/arco-design-mobile/commit/65c15a8f89649c3797caa3a6a57eccf6d9a99724))
+* 修改picker样式 ([69cd394](https://github.com/k-dylan/arco-design-mobile/commit/69cd394293058bd8c37d5d7d11df3587c1761244))
+
+
+
+
+
 # [2.35.0](https://github.com/arco-design/arco-design-mobile/compare/@arco-design/mobile-react@2.34.0...@arco-design/mobile-react@2.35.0) (2025-01-09)
 
 
